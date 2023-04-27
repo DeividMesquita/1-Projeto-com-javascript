@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br ">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <style>
+        body{
+            background-color: blueviolet;
+        }
+        h1{
+            color: red;
+            font-size: 50px;
+                }
+                fieldset{
+                    background-color: brown;
+                    color: black;
+                    font-size: 20px;
+                }
+    </style>
+</head>
+<body>
+    <h1>Contato</h1>
+    <div id="area">
+        <form id="formulario">
+            <fieldset>
+                <legend>
+                    Formulario de Contato
+                </legend>
+                <label>Nome: </label>
+                <input class="campo_nome" type="text"><br><br>
+                <label>Email: </label>
+                <input class="campo_email" type="text"><br><br>
+                <label>Mensagem: </label><br>
+                <textarea class="mensagem" cols="35" rows="8"></textarea><br>
+                <input class="btn_submit" type="submit" value="Enviar">
+            </fieldset>
+        </form><br>
+        <form>
+            <input type="button" value="VOLTAR" onclick="history.go(-1)"><br><br><br>
+            <input type="button" value="AVANÇAR" onclick="history.go(+1)">
+    </div>
+</body>
+</html>

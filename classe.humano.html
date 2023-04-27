@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classe Humano</title>
+</head>
+<body>
+    <h1>Classe Humano</h1>
+    <h2>Ações do Humano</h2>
+    <script>
+        class Humano{
+            constructor(nome){
+                this.nome = nome;
+            }
+            andar(){
+                return this.nome + ' andou um passo!'
+            }
+            cantar(){
+                return this.nome + ' cantou uma música!'
+            }
+        }
+        const HumanoFalante = base => class extends base{
+            falar(){
+                return this.nome + ' falou, sejam bem-vindos!'
+            }
+        }
+        const HumanoFalanteMixado = base => class extends base{}
+        const HumanoFinal = HumanoFalanteMixado(HumanoFalante(Humano))
+        const humano = new HumanoFinal('Deivid Mesquita ')
+        //saídas//
+        document.writeln(humano.andar() + "<br><br>")
+        document.writeln(humano.cantar() + "<br><br>")
+        document.writeln(humano.falar())
+    </script><br><br>
+    <form>
+        <input type="button" value="VOLTAR" onclick="history.go(-1)"><br><br><br>
+        <input type="button" value="AVANÇAR" onclick="history.go(+1)">
+</body>
+</html>
